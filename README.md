@@ -1,3 +1,3 @@
-# lletres_repetides Nivell 1 Exercici 3
+# lletres_repetides Nivell 1 Exercici 4
 
-Conteo de letras repetidas en el array con nuestro nombre. Lo guardamos en un map y ya que estamos, lo imprimimos por consola.
+Concatenamos dos arrays, uno con nuestro nombre y otro con el apellido. Le ponemos un elemento vacio en medio (un espacio). También lo mostramos en consola.
