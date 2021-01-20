@@ -4,17 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Sera Martin">
-	<title>Lletres Repetides -Nivell 1 Exercici 1</title>
+	<title>Lletres Repetides - Nivell 1 Exercici 2</title>
 </head>
 <body>
 	<script type="text/javascript">
-		let nombre=["S","e","r","a","f","í","n"];
+		let nombre=["S","e","r","a","4","f","í","n"];
+		let nombreString="";
+
+		nombre.forEach(nombreCompleto);
+		console.log("Partim del nom "+nombreString);
 		nombre.forEach(listado);
 
-		//Cojo la posición por seguir la estructura típica de un forEach, pero para este ejemplo no hace falta.
-		//Funciona igual pasando solo la letra, pero me parece más "feo".
-		function listado(letra,posicion){
-			console.log(letra);
+		//Venga, esta vez sin la posición. A ver si me acostumbro.
+		function nombreCompleto(letra){
+			nombreString=nombreString+letra;
+		}
+
+		function listado(letra){
+			if(isNaN(letra)){
+				if( letra=="a"||letra=="A"||letra=="á"||letra=="à"||
+					letra=="e"||letra=="E"||letra=="é"||letra=="è"||
+					letra=="i"||letra=="I"||letra=="í"||letra=="ì"||
+					letra=="o"||letra=="O"||letra=="ó"||letra=="ò"||
+					letra=="u"||letra=="U"||letra=="ú"||letra=="ù"){
+					console.log("He trobat la VOCAL: "+letra);
+				}else{
+					console.log("He trobat la CONSONANT: "+letra);
+				}
+			}else{
+				console.log("Els noms de les persones no contenen el número :"+letra);
+			}
 		}
 	</script>
 </body>
