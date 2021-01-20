@@ -4,37 +4,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Sera Martin">
-	<title>Lletres Repetides - Nivell 1 Exercici 2</title>
+	<title>Lletres Repetides - Nivell 1 Exercici 3</title>
 </head>
 <body>
 	<script type="text/javascript">
-		let nombre=["S","e","r","a","4","f","í","n"];
-		let nombreString="";
+		let nombre=["S","e","r","a","a","f","í","n"];
+		let estadistica=new Map();
 
-		nombre.forEach(nombreCompleto);
-		console.log("Partim del nom "+nombreString);
-		nombre.forEach(listado);
+		nombre.forEach(contadora);
+		estadistica.forEach(imprimeConsola);		
 
-		//Venga, esta vez sin la posición. A ver si me acostumbro.
-		function nombreCompleto(letra){
-			nombreString=nombreString+letra;
-		}
-
-		function listado(letra){
-			if(isNaN(letra)){
-				if( letra=="a"||letra=="A"||letra=="á"||letra=="à"||
-					letra=="e"||letra=="E"||letra=="é"||letra=="è"||
-					letra=="i"||letra=="I"||letra=="í"||letra=="ì"||
-					letra=="o"||letra=="O"||letra=="ó"||letra=="ò"||
-					letra=="u"||letra=="U"||letra=="ú"||letra=="ù"){
-					console.log("He trobat la VOCAL: "+letra);
-				}else{
-					console.log("He trobat la CONSONANT: "+letra);
+		function contadora(letra){
+			let apariciones=0;
+			for(i=0;i<nombre.length;i++){
+				if(nombre[i]==letra){
+					apariciones=apariciones+1;;
 				}
-			}else{
-				console.log("Els noms de les persones no contenen el número :"+letra);
+			}
+			if(estadistica.has(letra)==false){
+				estadistica.set(letra,apariciones);
 			}
 		}
+
+		function imprimeConsola(apariciones,letra){
+			console.log(letra+":"+apariciones);
+		}		
 	</script>
 </body>
 </html>

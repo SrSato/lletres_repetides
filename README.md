@@ -1,4 +1,3 @@
-# lletres_repetides Nivell 1 Exercici 2
+# lletres_repetides Nivell 1 Exercici 3
 
-Guardamos las letras de nuestro nombre en un array y las recorremos imprimiéndolas por consola.
-Explicitamos qué es cada letra. Hay un especial cariño con los acentos.
+Conteo de letras repetidas en el array con nuestro nombre. Lo guardamos en un map y ya que estamos, lo imprimimos por consola.
