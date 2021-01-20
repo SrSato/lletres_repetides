@@ -1,3 +1,3 @@
-# lletres_repetides
+# lletres_repetides Nivell 1 Exercici 1
 
-Preparación de la rama común (archivos básicos)
+Guardamos las letras de nuestro nombre en un array y las recorremos imprimiéndolas por consola.
