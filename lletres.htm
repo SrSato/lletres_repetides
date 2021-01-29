@@ -1,34 +1,135 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="cat">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Sera Martin">
-	<title>Lletres Repetides - Nivell 2 Exercici 1</title>
+	<title>Lletres Repetides - Nivell 3 Exercici 1</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+	<style>
+		.columne{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 70px;
+			max-width: 600px;			
+		}	
+		body{
+			padding:0;
+			margin:0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.itPink{
+			background-color: rgb(255, 26, 140);
+			color:white;
+		}
+		.itGreen{
+			background-color: rgb(102, 255, 51);
+		}
+		.w3-card{
+			/*border-radius:10px;*/
+			overflow: hidden;
+		}
+		.respuesta{
+			color: rgb(255, 26, 140);
+			font-size: 1.5em;
+		}
+	</style>
+	<script src="logica.js"></script>
 </head>
 <body>
-	<script type="text/javascript">
-		var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email';
-		let patron= /\w+([-+.']\w+)*@\w+([-.]\w+)*/;
-		let res=[];
+	
+	<div class="w3-top w3-card itPink w3-center">
+		<h1><b>RESUM DELS EXERCICIS:</b> Lletres Repetides</h1>
+	</div>
+	<div class="w3-container columne ">
+		<div class="w3-card w3-round w3-margin w3-sand " id="n1e1">
+			<header class="w3-container itPink">
+			  <h3>Nivell 1 - Exercici 1</h3>
+			</header>
+			<div class="w3-container">
+				<ul>
+				    <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+				    <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
+				</ul>
+			  <hr>		  
+			  <label for="input_n1e1">Introdueix el teu nom:</label>
+			  <input type="text" class="w3-input" placeholder="nom" id="input_n1e1">
+			</div>
+			<button class="w3-button w3-block itGreen w3-margin-top" onclick="primero('input_n1e1')"> Apa! </button>
+		</div> 
+		<div class="w3-card w3-margin w3-sand" id="n1e1">
+			<header class="w3-container itPink">
+			  <h3>Nivell 1 - Exercici 2</h3>
+			</header>
+			<div class="w3-container">
+				<ul>
+				    <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</li>
+				    <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’</li>
+				</ul>
+			  <hr>		  
+			  <label for="input_n1e2">Introdueix el teu nom:</label>
+			  <input type="text" class="w3-input" placeholder="nom" id="input_n1e2">
+			</div>
+			<button class="w3-button w3-block itGreen w3-margin-top" onclick="segundo('input_n1e2')"> Apa! </button>
+		</div> 
+		<div class="w3-card w3-margin w3-sand" id="n1e3">
+			<header class="w3-container itPink">
+			  <h3>Nivell 1 - Exercici 3</h3>
+			</header>
+			<div class="w3-container">
+				<ul>
+				    <li>Emmagatzemar en un Map les lletres de l'array y el nombre de vegades que apareixen.</li>			   
+				</ul>
+			  <hr>		  
+			  <label for="input_n1e3">Introdueix el teu nom:</label>
+			  <input type="text" class="w3-input" placeholder="nom" id="input_n1e3">
+			</div>
+			<button class="w3-button w3-block itGreen w3-margin-top" onclick="tercero('input_n1e3')"> Apa! </button>
+		</div> 
+		<div class="w3-card w3-margin w3-sand" id="n1e4">
+			<header class="w3-container itPink">
+			  <h3>Nivell 1 - Exercici 4</h3>
+			</header>
+			<div class="w3-container">
+				<ul>
+				    <li>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</li>	
+				    <li>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li>			   
+				</ul>
+			  <hr>		  
+			  <label for="input_n1e4">Introdueix el teu nom:</label>
+			  <input type="text" class="w3-input" placeholder="nom" id="input_n1e4_nom">			  
+			  <label for="input_n1e4">Introdueix el teu cognom:</label>
+			  <input type="text" class="w3-input" placeholder="cognom" id="input_n1e4_cognom">
+			</div>
+			<button class="w3-button w3-block itGreen w3-margin-top" onclick="cuarto('input_n1e4_nom','input_n1e4_cognom')"> Apa! </button>
+		</div> 
+		<div class="w3-card w3-margin w3-sand" id="n1e5">
+			<header class="w3-container itPink">
+			  <h3>Nivell 2 - Exercici 1</h3>
+			</header>
+			<div class="w3-container">
+				<ul>
+				    <li>Crea una funció que retorni un array amb tots els email (sense repetir) del següent text:<br>
 
-		//Tratamos el texto para quitarnos carácteres problemáticos
-		str=str.replace(/[\(\),:]/g," ");
-		//Fraccionamos el texto en "palabras" o cadenas sin espacios y las guardamos en un array 
-		let arrayTexto=str.split(" ");
-		//comprobamos cada cadena
-		arrayTexto.forEach(comprueba);
+						var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email'; </li>			   
+				</ul>
+			  <hr>	  
+			  
+			</div>
+			<button class="w3-button w3-block itGreen w3-margin-top" onclick="quinto()"> Apa! </button>
+		</div> 
+	</div>
 
-		function comprueba(palabra){
-			if(palabra.match(patron)){
-				palabra=palabra.toLowerCase();
-				if(res.includes(palabra)==false){
-					res.push(palabra);
-				}
-			}
-		}
-
-		console.log(res);
-	</script>
+	<div id="frameRes" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('frameRes').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div id="res"></div>
+        
+      </div>
+    </div>
+  </div>
 </body>
 </html>
